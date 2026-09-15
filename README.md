@@ -7,13 +7,11 @@ style, gender, and date.
 
 ## Screenshots
 
-| Explore | Upload |
-| --- | --- |
-| ![Explore page](docs/screenshots/explore.png) | ![Upload page](docs/screenshots/upload.png) |
+**Explore**
+![Explore page](docs/screenshots/explore.png)
 
-| Login | Register |
-| --- | --- |
-| ![Login page](docs/screenshots/login.png) | ![Register page](docs/screenshots/register.png) |
+**Upload**
+![Upload page](docs/screenshots/upload.png)
 
 ## Tech stack
 
