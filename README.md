@@ -31,8 +31,13 @@ style, gender, and date.
 - [Roboflow](https://roboflow.com/) computer vision models for clothing item segmentation, style classification, and gender classification (`backend/annotate/tasks.py`)
 
 **Data pipeline** — `scraper/` (not required to run the app; excluded from git because of size)
-- A [Selenium](https://www.selenium.dev/) scraper (`chromedriver-mac-arm64`) that pulls outfit photos from Pinterest, sorted into folders by style category (`scraper/images/<style>/`)
+- A [Selenium](https://www.selenium.dev/) scraper (`chromedriver-mac-arm64`) automatically:
+    - Searches through a list of keywords while mixing gender keywords (for example, "Business Casual" + "women" + outfits) on Pinterest.
+    - scrolls to load images and downloads 75 images from each search (for a total of 75 images * 2 genders * 19 styles = 2850).
+    - Adds randomized delays  to avoid bot detection, 
+    - Sorts images into folders by style category (`scraper/images/<style>/`)
 - Those labeled images are the training data behind the Roboflow `outfit-styles` classifier, so the style categories in the app (`frontend/src/searchOptions.js`) mirror the scraper's folder names: 90s hip hop, casual, clean, dark academia, downtown, gorpcore, grunge, light academia, old money, opium, preppy, skater, soft, star, streetwear, surfer, vintage, workwear
+- 
 
 ## Annotation pipeline
 
