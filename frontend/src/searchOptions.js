@@ -92,21 +92,25 @@ export const CLOTHING_ITEMS = [
   "zip up",
 ];
 
+// Mirrors the style categories used to collect training data for the
+// Roboflow "outfit-styles" classifier (see scraper/images/*).
 export const STYLE_TAGS = [
+  "90s hip hop",
   "Casual",
-  "Streetwear",
-  "Formal",
-  "Business casual",
-  "Athletic",
-  "Preppy",
-  "Minimalist",
-  "Vintage",
+  "Clean",
+  "Dark academia",
+  "Downtown",
+  "Gorpcore",
   "Grunge",
-  "Bohemian",
-  "Techwear",
+  "Light academia",
   "Old money",
-  "Y2K",
-  "Cottagecore",
+  "Opium",
+  "Preppy",
   "Skater",
-  "Smart casual",
+  "Soft",
+  "Star",
+  "Streetwear",
+  "Surfer",
+  "Vintage",
+  "Workwear",
 ];

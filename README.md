@@ -32,6 +32,20 @@ style, gender, and date.
 - [Cloudinary](https://cloudinary.com/) for hosted image storage
 - [Roboflow](https://roboflow.com/) computer vision models for clothing item segmentation, style classification, and gender classification (`backend/annotate/tasks.py`)
 
+**Data pipeline** — `scraper/` (not required to run the app; excluded from git because of size)
+- A [Selenium](https://www.selenium.dev/) scraper (`chromedriver-mac-arm64`) that pulls outfit photos from Pinterest, sorted into folders by style category (`scraper/images/<style>/`)
+- Those labeled images are the training data behind the Roboflow `outfit-styles` classifier, so the style categories in the app (`frontend/src/searchOptions.js`) mirror the scraper's folder names: 90s hip hop, casual, clean, dark academia, downtown, gorpcore, grunge, light academia, old money, opium, preppy, skater, soft, star, streetwear, surfer, vintage, workwear
+
+## Annotation pipeline
+
+When a user uploads a photo (`POST /api/upload/`), `backend/annotate/tasks.py` runs it through three Roboflow models before saving it:
+
+1. **`outfit-styles`** — classifies the overall style (e.g. streetwear, old money)
+2. **`gender-detection-irbyv`** — classifies gender presentation
+3. **`cs-lab-project`** — segments individual clothing items (shirt, jeans, jacket, etc.), trained on the labeled dataset in `backend/CS-lab-project-2/` with the class list in `backend/annotate/class_colors.json`
+
+The clothing segmentation is drawn as a colored outline over a copy of the image, which is uploaded to Cloudinary as the "annotated" version. The detected style, gender, and clothing annotations are saved on the `Upload` model so the Explore page can filter by them.
+
 ## Project structure
 
 ```
@@ -39,6 +53,7 @@ frontend/   React + Vite single-page app
 backend/    Django REST API
   api/          user registration/auth endpoints
   annotate/     image upload, Roboflow annotation pipeline, outfit feed endpoints
+scraper/    Selenium/Pinterest scraper used to build the style-classifier training set (local tooling, not deployed)
 ```
 
 ## Getting started
