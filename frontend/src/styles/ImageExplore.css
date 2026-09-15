@@ -1,0 +1,297 @@
+/* Hero -------------------------------------------------------------- */
+
+.hero {
+  position: relative;
+  overflow: hidden;
+  display: flex;
+  justify-content: center;
+  padding: var(--space-8) var(--space-6);
+  margin: var(--space-6);
+  border-radius: var(--radius-lg);
+  background-color: #182523;
+  background-image: repeating-linear-gradient(
+    45deg,
+    rgba(244, 241, 236, 0.05) 0px,
+    rgba(244, 241, 236, 0.05) 1px,
+    transparent 1px,
+    transparent 14px
+  );
+  color: #f4f1ec;
+  text-align: center;
+}
+
+.hero-content {
+  position: relative;
+  max-width: 560px;
+}
+
+.hero-intro {
+  font-size: clamp(2.25rem, 4vw, 3rem);
+  font-weight: 700;
+  letter-spacing: -0.02em;
+  margin-bottom: var(--space-3);
+}
+
+.hero-divider {
+  width: 56px;
+  height: 3px;
+  margin: 0 auto var(--space-4);
+  border-radius: var(--radius-full);
+  background-color: var(--color-accent);
+}
+
+.hero-motto {
+  font-size: 1.15rem;
+  font-weight: 400;
+  color: rgba(244, 241, 236, 0.8);
+  line-height: 1.5;
+}
+
+/* Layout -------------------------------------------------------------- */
+
+.recommended-sidebar-container {
+  display: flex;
+  gap: var(--space-6);
+  padding: 0 var(--space-6) var(--space-8);
+  align-items: flex-start;
+}
+
+.searchbar-recommended-container {
+  display: flex;
+  flex-direction: column;
+  gap: var(--space-4);
+  width: 100%;
+}
+
+/* Sidebar --------------------------------------------------------------- */
+
+.sidebar {
+  background-color: var(--color-surface);
+  border: 1px solid var(--color-border);
+  border-radius: var(--radius-lg);
+  box-shadow: var(--shadow-sm);
+  width: 260px;
+  flex-shrink: 0;
+  padding: var(--space-2);
+  display: flex;
+  flex-direction: column;
+  gap: var(--space-1);
+  position: sticky;
+  top: calc(84px + var(--space-4));
+}
+
+.sidebar-unit {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  height: 48px;
+  padding: 0 var(--space-3);
+  border-radius: var(--radius-sm);
+  font-weight: 500;
+  color: var(--color-ink);
+}
+
+.sidebar-unit:hover {
+  background-color: var(--color-surface-muted);
+}
+
+.expand-panel {
+  width: 24px;
+  height: 24px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  color: var(--color-ink-muted);
+  font-size: 1.1rem;
+  line-height: 1;
+  border-radius: var(--radius-full);
+}
+
+.expand-panel:hover {
+  background-color: var(--color-surface);
+  color: var(--color-ink);
+}
+
+.panel-unit {
+  padding: var(--space-3) var(--space-3) var(--space-4);
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+#gender-panel {
+  flex-direction: column;
+  align-items: stretch;
+  gap: var(--space-2);
+}
+
+.gender-wrapper {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: var(--space-1) var(--space-2);
+}
+
+#date-range-panel {
+  flex-direction: column;
+  align-items: stretch;
+  gap: var(--space-2);
+}
+
+.date-range-input {
+  height: 40px;
+  width: 100%;
+  padding: 0 var(--space-2);
+  border: 1px solid var(--color-border-strong);
+  border-radius: var(--radius-sm);
+  background-color: var(--color-surface);
+  color: var(--color-ink);
+  font-size: 0.85rem;
+}
+
+#style-panel form {
+  width: 100%;
+}
+
+#style-input {
+  height: 40px;
+  width: 100%;
+  padding: 0 var(--space-3);
+  border: 1px solid var(--color-border-strong);
+  border-radius: var(--radius-sm);
+  background-color: var(--color-surface);
+  color: var(--color-ink);
+}
+
+#style-input:focus,
+.date-range-input:focus {
+  outline: none;
+  border-color: var(--color-accent);
+  box-shadow: 0 0 0 3px var(--color-focus);
+}
+
+/* Search suggestions ---------------------------------------------------- */
+
+.search-field {
+  position: relative;
+  width: 100%;
+}
+
+.suggestions-dropdown {
+  position: absolute;
+  top: calc(100% + var(--space-1));
+  left: 0;
+  right: 0;
+  z-index: 20;
+  display: flex;
+  flex-direction: column;
+  padding: var(--space-1);
+  background-color: var(--color-surface);
+  border: 1px solid var(--color-border);
+  border-radius: var(--radius-md);
+  box-shadow: var(--shadow-md);
+  max-height: 240px;
+  overflow-y: auto;
+}
+
+.suggestion-item {
+  display: block;
+  width: 100%;
+  padding: var(--space-2) var(--space-3);
+  border-radius: var(--radius-sm);
+  text-align: left;
+  font-size: 0.9rem;
+  color: var(--color-ink);
+}
+
+.suggestion-item:hover {
+  background-color: var(--color-surface-muted);
+}
+
+/* Search + filters ------------------------------------------------------ */
+
+.searchbar {
+  height: 52px;
+  width: 100%;
+  padding: 0 var(--space-4);
+  border: 1px solid var(--color-border-strong);
+  border-radius: var(--radius-md);
+  background-color: var(--color-surface);
+  color: var(--color-ink);
+  font-size: 1rem;
+}
+
+.searchbar::placeholder {
+  color: var(--color-ink-muted);
+}
+
+.searchbar:focus {
+  outline: none;
+  border-color: var(--color-accent);
+  box-shadow: 0 0 0 3px var(--color-focus);
+}
+
+.filters {
+  display: flex;
+  flex-wrap: wrap;
+  gap: var(--space-2);
+}
+
+.filter {
+  display: flex;
+  align-items: center;
+  gap: var(--space-2);
+  padding: var(--space-1) var(--space-2) var(--space-1) var(--space-3);
+  border-radius: var(--radius-full);
+  background-color: var(--color-accent-tint);
+  color: var(--color-accent-hover);
+  font-size: 0.85rem;
+  font-weight: 500;
+}
+
+.remove-filter-button {
+  width: 20px;
+  height: 20px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  border-radius: var(--radius-full);
+  color: var(--color-accent-hover);
+  opacity: 0.7;
+}
+
+.remove-filter-button:hover {
+  opacity: 1;
+  background-color: rgba(0, 0, 0, 0.06);
+}
+
+/* Recommended grid -------------------------------------------------------- */
+
+.recommended {
+  display: grid;
+  grid-template-columns: repeat(auto-fill, 220px);
+  gap: var(--space-4);
+  width: 100%;
+}
+
+.upload-rec {
+  position: relative;
+  background-color: var(--color-surface);
+  border: 1px solid var(--color-border);
+  border-radius: var(--radius-lg);
+  width: 220px;
+  height: 220px;
+  overflow: hidden;
+  transition: box-shadow var(--transition), transform var(--transition);
+}
+
+.upload-rec:hover {
+  box-shadow: var(--shadow-md);
+  transform: translateY(-2px);
+}
+
+.upload-pic {
+  width: 100%;
+  height: 100%;
+  object-fit: scale-down;
+}

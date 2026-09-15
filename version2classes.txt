@@ -1,0 +1,129 @@
+Jumpsuit	
+T shirt	
+T shirt (under)	
+aline skirt	
+ankle warmers	
+bandana	
+beanie	
+beaters	
+belt	
+bere	
+berets	
+bomber jacket	
+boots	
+box pleat skirt	
+brimmer hat	
+button t shirt	
+camo pants	
+cap	
+capris	
+cardigan	
+cargo pants	
+chinos	
+coat	
+crewneck	
+cropped hoodie	
+cropped jersey	
+cropped long sleeve	
+cropped sleeveless	
+cropped t shirt	
+cropped tank top	
+dress pants	
+dress shoes	
+fishnets (arms)	
+fishnets (legs)	
+flannel	
+flannel (wrapped)	
+flannel shirt	
+fleece jacket	
+half-fleece jacket	
+heels	
+high boots	
+high socks
+hoodie	
+hoodie (under)	
+jacket	
+jacket (waist-wrapped)	
+jean jacket	
+jean shorts	
+jeans	
+jersey	
+jorts	
+knitted t shirt	
+leather coat	
+leather jacket	
+leather vest	
+linen short	
+linens	
+loafer	
+long skirt	
+long sleeve	
+long sleeve (under)	
+low cut long sleeve	
+mask	
+maxi skirt	
+midi skirt	
+mini skirt	
+mountain pants	
+neck tie	
+off shoulder cropped long sleeve	
+off shoulder long sleeve	
+off shoulder short sleeve	
+off shoulder sweater	
+off shoulder t shirt	
+overalls	
+parachute pants	
+pencil skirt	
+pit vipers	
+plaid pants	
+pleated pants	
+polo	
+puffer jacket	
+puffer vest	
+purse	
+quarter zip	
+ripped jeans	
+sandals	
+scarf	
+sean	
+semi opaque stockings	
+sheer leggings	
+sheer stockings	
+shirt	
+shirt jacket	
+short sleeve shirt	
+shorts	
+shrugs	
+skinny	
+sleeveless shirt	
+sleeveless turtleneck	
+slides	
+sneaker	
+suit jacket	
+suit pants	
+sunglasses	
+sweater	
+sweater vest	
+sweatpants	
+tank top	
+tote bag	
+track pants	
+tracksuit	
+trousers	
+tube top	
+tube top (under)
+turtleneck	
+turtleneck tank top	
+ushanka	
+v neck long sleeve	
+v neck sweater	
+v neck t shirt	
+varsity jacket	
+vest	
+vinyl pants	
+windbreaker jacket	
+winter boots	
+work	
+workwear jacket	
+workwear pants	
+zip up

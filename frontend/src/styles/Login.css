@@ -1,0 +1,74 @@
+.form-container-container {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  min-height: calc(100vh - 84px);
+  padding: var(--space-6);
+}
+
+.form-container {
+  display: flex;
+  flex-direction: column;
+  gap: var(--space-4);
+  width: 100%;
+  max-width: 380px;
+  padding: var(--space-7) var(--space-6);
+  background-color: var(--color-surface);
+  border: 1px solid var(--color-border);
+  border-radius: var(--radius-lg);
+  box-shadow: var(--shadow-md);
+}
+
+.form-container h1 {
+  font-size: 1.5rem;
+  margin-bottom: var(--space-2);
+}
+
+.form-input {
+  height: 44px;
+  width: 100%;
+  padding: 0 var(--space-4);
+  border: 1px solid var(--color-border-strong);
+  border-radius: var(--radius-md);
+  background-color: var(--color-surface);
+  color: var(--color-ink);
+  font-size: 0.95rem;
+}
+
+.form-input::placeholder {
+  color: var(--color-ink-muted);
+}
+
+.form-input:focus {
+  outline: none;
+  border-color: var(--color-accent);
+  box-shadow: 0 0 0 3px var(--color-focus);
+}
+
+.form-button {
+  height: 44px;
+  width: 100%;
+  margin-top: var(--space-2);
+  border-radius: var(--radius-md);
+  background-color: var(--color-ink);
+  color: var(--color-surface);
+  font-weight: 600;
+  transition: background-color var(--transition);
+}
+
+.form-button:hover {
+  background-color: var(--color-accent);
+}
+
+.form-button:disabled {
+  opacity: 0.6;
+  cursor: default;
+}
+
+.form-error {
+  padding: var(--space-2) var(--space-3);
+  border-radius: var(--radius-sm);
+  background-color: var(--color-danger-tint);
+  color: var(--color-danger);
+  font-size: 0.85rem;
+}

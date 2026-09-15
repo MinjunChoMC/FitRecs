@@ -1,0 +1,34 @@
+# --- Secrets -----------------------------------------------------------
+.env
+*/.env
+**/.env
+
+# --- Python / Django -----------------------------------------------------
+venv/
+**/venv/
+__pycache__/
+**/__pycache__/
+*.pyc
+backend/db.sqlite3
+backend/media/
+backend/staticfiles/
+
+# --- Node / Vite ---------------------------------------------------------
+node_modules/
+frontend/dist/
+frontend/dist-ssr/
+*.local
+
+# --- OS / editor -----------------------------------------------------------
+.DS_Store
+.vscode/*
+!.vscode/extensions.json
+.idea
+
+# --- ML datasets & scraping scratch (large, not needed to run the app) ----
+CS-lab-project-1/
+CS-lab-project-2/
+backend/CS-lab-project-1/
+backend/CS-lab-project-2/
+scraper/
+testing-images/
